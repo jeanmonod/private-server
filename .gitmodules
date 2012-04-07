@@ -1,3 +1,9 @@
 [submodule "cookbooks/apt"]
 	path = cookbooks/apt
 	url = https://github.com/cookbooks/ss-chef-apt
+[submodule "cookbooks/php"]
+	path = cookbooks/php
+	url = https://github.com/opscode-cookbooks/php.git
+[submodule "cookbooks/apache2"]
+	path = cookbooks/apache2
+	url = https://github.com/opscode-cookbooks/apache2.git
