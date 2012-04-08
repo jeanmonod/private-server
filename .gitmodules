@@ -1,3 +1,0 @@
-[submodule "cookbooks/apt"]
-	path = cookbooks/apt
-	url = https://github.com/cookbooks/ss-chef-apt
