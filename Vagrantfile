@@ -13,4 +13,10 @@ Vagrant::Config.run do |config|
     chef.add_recipe     "apt"
 
   end
+
+  # Use apt-mirror from host, only if .vagrant-shared/var/cache/apt/archives/partial exists
+  if File.directory? File.expand_path "./.vagrant-shared/var/cache/apt/archives/partial/"
+    config.vm.share_folder "apt-cache", "/var/cache/apt/archives", "./.vagrant-shared/var/cache/apt/archives", :owner => "root", :group => "root"
+  end
+
 end
