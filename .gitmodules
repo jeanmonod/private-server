@@ -7,3 +7,6 @@
 [submodule "cookbooks/apt"]
 	path = cookbooks/apt
 	url = https://github.com/cookbooks/apt.git
+[submodule "cookbooks/java"]
+	path = cookbooks/java
+	url = https://github.com/cookbooks/java.git

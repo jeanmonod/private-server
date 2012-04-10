@@ -5,7 +5,8 @@ Vagrant::Config.run do |config|
   config.vm.box_url = "http://files.travis-ci.org/boxes/bases/oneiric32_base.box"
 
   # Network configuration
-  config.vm.forward_port 80, 8080 # http
+  config.vm.forward_port 80,   8080     # HTTP Web Server (Apache or Nginx)
+  config.vm.forward_port 9000, 9090     # Play embedded application server
 
   # Provisionning with chef solo
   config.vm.provision :chef_solo do |chef|
@@ -14,8 +15,10 @@ Vagrant::Config.run do |config|
 
     # List of the recipe to execute
     chef.add_recipe     "apt"
+
     chef.add_recipe     "php_stack"
 
+    chef.add_recipe     "play-framework"
   end
 
   # Use apt-mirror from host, only if .vagrant-shared/var/cache/apt/archives/partial exists
