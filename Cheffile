@@ -3,6 +3,8 @@
 
 site 'http://community.opscode.com/api/v1'
 
+############################## Public Cookbooks ###############################
+
 cookbook 'apt',
   :git => 'https://github.com/opscode-cookbooks/apt.git', 
   :ref => '1.5.0'
@@ -14,4 +16,9 @@ cookbook 'apache2',
 cookbook 'php',
   :git => 'https://github.com/opscode-cookbooks/php.git',
   :ref => '1.1.0'
+
+############################# Private Cookbooks ###############################
+
+cookbook 'php_stack',
+  :path => 'private-cookbooks/php_stack'
 

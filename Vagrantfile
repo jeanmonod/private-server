@@ -25,7 +25,7 @@ Vagrant::Config.run do |config|
 
   # Provisionning with chef solo
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = ["cookbooks", "private-cookbooks"]
+    chef.cookbooks_path = ["cookbooks"]
     chef.log_level      = :info
 
     # List of the recipe to execute
