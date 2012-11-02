@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+cookbook 'apt',
+  :git => 'https://github.com/opscode-cookbooks/apt.git', 
+  :ref => '1.5.0'
+
+cookbook 'apache2',
+  :git => 'https://github.com/opscode-cookbooks/apache2.git',
+  :ref => '1.2.0'
+
+cookbook 'php',
+  :git => 'https://github.com/opscode-cookbooks/php.git',
+  :ref => '1.1.0'
+

@@ -25,13 +25,12 @@ Vagrant::Config.run do |config|
 
   # Provisionning with chef solo
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = ["cookbooks"]
+    chef.cookbooks_path = ["cookbooks", "private-cookbooks"]
     chef.log_level      = :info
 
     # List of the recipe to execute
     chef.add_recipe     "apt"
-    chef.add_recipe     "php_stack"
-
+    chef.add_recipe     "php_stack" 
   end
 
   # Use apt-mirror from host, only if .vagrant-shared/var/cache/apt/archives/partial exists
