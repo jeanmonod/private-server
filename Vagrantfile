@@ -1,8 +1,24 @@
 Vagrant::Config.run do |config|
 
   # Base box to use
-  config.vm.box     = "oneiric32"
-  config.vm.box_url = "http://files.travis-ci.org/boxes/bases/oneiric32_base.box"
+
+  # Ubuntu 11.10, 32 bit (no more working with latest vagrant/chef-solo/cookbooks stack)
+  # config.vm.box     = "oneiric32"
+  # config.vm.box_url = "http://files.travis-ci.org/boxes/bases/oneiric32_base.box"
+
+  # Travis-CI base boxes are configured with:
+  # - sudoer called 'travis' instead 'vagrant'
+  # - another "insecure" keypair as vagrant default:
+  config.ssh.username = "travis"
+  config.ssh.private_key_path = "vagrant.key"
+
+  # Ubuntu 12.04, 32 bit
+  # config.vm.box     = "precise32"
+  # config.vm.box_url = "http://files.travis-ci.org/boxes/bases/precise32_base_v2.box"
+
+  # Ubuntu 12.04, 64 bit
+  config.vm.box     = "precise64"
+  config.vm.box_url = "http://files.travis-ci.org/boxes/bases/precise64_base_v2.box"
 
   # Network configuration
   config.vm.forward_port 80, 8080 # http
