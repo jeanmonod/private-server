@@ -6,8 +6,6 @@ site 'http://community.opscode.com/api/v1'
 ########################### Opscode-API Cookbooks #############################
 
 cookbook 'apt'
-cookbook 'apache2'
-cookbook 'php'
 
 ############################ Git-Public Cookbooks #############################
 

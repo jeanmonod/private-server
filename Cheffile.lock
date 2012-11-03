@@ -22,8 +22,6 @@ PATH
       php (>= 0.0.0)
 
 DEPENDENCIES
-  apache2 (>= 0)
   apt (>= 0)
-  php (>= 0)
   php_stack (>= 0)
 
