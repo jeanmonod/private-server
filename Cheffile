@@ -3,22 +3,17 @@
 
 site 'http://community.opscode.com/api/v1'
 
-############################## Public Cookbooks ###############################
+########################### Opscode-API Cookbooks #############################
 
-cookbook 'apt',
-  :git => 'https://github.com/opscode-cookbooks/apt.git', 
-  #:ref => '1.5.0'
-  :ref => 'master'
+cookbook 'apt'
+cookbook 'apache2'
+cookbook 'php'
 
-cookbook 'apache2',
-  :git => 'https://github.com/opscode-cookbooks/apache2.git',
-  #:ref => '1.2.0'
-  :ref => 'master'
+############################ Git-Public Cookbooks #############################
 
-cookbook 'php',
-  :git => 'https://github.com/opscode-cookbooks/php.git',
-  #:ref => '1.1.0'
-  :ref => 'master'
+#cookbook 'name',
+#  :git => 'https://github.com/owner/repo.git'
+#  :ref => 'tag/branch'
 
 ############################# Private Cookbooks ###############################
 
