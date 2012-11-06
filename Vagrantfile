@@ -1,8 +1,8 @@
 Vagrant::Config.run do |config|
 
   # Base box to use
-  config.vm.box     = "oneiric32"
-  config.vm.box_url = "http://files.travis-ci.org/boxes/bases/oneiric32_base.box"
+  config.vm.box = "ubuntu-121064"   # Ubuntu 12.10 64 bit, with Chef-solo 10.16.2 and VirtualBox Guest Additions 4.2.4
+  config.vm.box_url = "https://dl.dropbox.com/u/10717540/vagrant/ubuntu-121064.box"
 
   # Network configuration
   config.vm.forward_port 80, 8080 # http
@@ -15,7 +15,6 @@ Vagrant::Config.run do |config|
     # List of the recipe to execute
     chef.add_recipe     "apt"
     chef.add_recipe     "php_stack"
-
   end
 
   # Use apt-mirror from host, only if .vagrant-shared/var/cache/apt/archives/partial exists
