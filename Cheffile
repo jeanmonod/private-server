@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+########################### Opscode-API Cookbooks #############################
+
+cookbook 'apt'
+
+############################ Git-Public Cookbooks #############################
+
+#cookbook 'name',
+#  :git => 'https://github.com/owner/repo.git'
+#  :ref => 'tag/branch'
+
+############################# Private Cookbooks ###############################
+
+cookbook 'php_stack',
+  :path => 'private-cookbooks/php_stack'
+
