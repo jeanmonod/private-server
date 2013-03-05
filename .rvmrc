@@ -1,0 +1,3 @@
+rvm use ruby-1.9.3@jeanmonod_private-server --create
+# Gilles - 2013-03-06: upgrade to ruby 2.0.0 may be a valid option (see http://developers.slashdot.org/story/13/02/24/1318235/ruby-200-released). to be tested...
+
