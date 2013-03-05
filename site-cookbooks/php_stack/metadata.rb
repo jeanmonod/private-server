@@ -9,7 +9,7 @@ version          "0.0.0"
     supports os
 end
 
-%w{ apache2 php }.each do |cb|
+%w{ apache2 }.each do |cb|
     depends cb
 end
 
