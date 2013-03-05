@@ -1,2 +1,4 @@
-.vagrant
-.vagrant-shared
+/.vagrant
+/.vagrant-shared
+Berksfile.lock
+Gemfile.lock
