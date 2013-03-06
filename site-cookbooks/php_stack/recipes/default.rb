@@ -1,6 +1,5 @@
 require_recipe "apache2"
 require_recipe "apache2::mod_php5"
-require_recipe "php"
 
 # Disable the default apache site
 apache_site 'default' do
